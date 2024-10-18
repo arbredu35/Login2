@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Meilleur Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+            background-color: #8c00ff;
+        }
+
+        header {
+            background: #6f2c9100; /* Violet */
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            animation: fadeIn 1s;
+        }
+
+        nav ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 20px;
+        }
+
+        nav ul li a {
+            color: #fff;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: #5e0066; /* Rose au survol */
+        }
+
+        #hero {
+            background: #f4e1f4; /* Rose clair */
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 1px solid #ddd;
+            animation: fadeIn 1s 0.5s;
+        }
+
+        section {
+            padding: 2rem;
+            margin: 1rem auto;
+            max-width: 800px;
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+
+        .flex-container {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+        }
+
+        .article, .shop {
+            background: #e2e2e2;
+            padding: 20px;
+            border-radius: 5px;
+            flex: 1;
+            margin: 0 10px;
+            transition: transform 0.3s;
+        }
+
+        .article:hover, .shop:hover {
+            transform: scale(1.05);
+        }
+
+        footer {
+            background: #6f2c91; /* Violet */
+            color: #fff;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            border-top: 1px solid #ddd;
+            animation: fadeIn 1s;
+        }
+
+        footer h3 {
+            margin-bottom: 10px;
+        }
+
+        footer p {
+            margin: 0;
+        }
+
+        footer a {
+            color: #c401ff; /* Rose */
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        button {
+            padding: 10px;
+            background: #d400ff; /* Rose */
+            border: none;
+            color: white;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 10px;
+            transition: background 0.3s;
+        }
+
+        button:hover {
+            background: #8000a7; /* Rose foncé au survol */
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+
+        form label {
+            margin-top: 10px;
+        }
+
+        form input, form textarea {
+            padding: 10px;
+            margin-top: 5px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            resize: vertical;
+        }
+
+        /* Styles pour la section d'inscription et de connexion */
+        .auth-section {
+            background: #ffffff; /* Rose clair */
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            animation: fadeIn 1s;
+        }
+
+        /* Styles pour le rond qui suit la souris */
+        .cursor-circle {
+            position: absolute;
+            width: 30px; /* Largeur du rond */
+            height: 30px; /* Hauteur du rond */
+            background-color: rgba(58, 0, 97, 0.5); /* Couleur du rond */
+            border: 2px solid #c300ff; /* Contour blanc */
+            border-radius: 50%; /* Forme ronde */
+            pointer-events: none; /* Ne pas interférer avec les clics de souris */
+            transform: translate(-50%, -50%); /* Centrer le rond par rapport à la souris */
+            transition: background-color 0.3s; /* Transition pour la couleur */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li><a href="#about">À Propos</a></li>
+                <li><a href="#blog">Blog</a></li>
+                <li><a href="#shop">Boutique</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#auth">Connexion/Inscription</a></li> <!-- Lien vers la section auth -->
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <h2>Bonjour</h2>
+        <p>Bienvenu sur mon site.</p>
+    </section>
+
+    <section id="featured">
+        <h2>À la Une</h2>
+        <div class="flex-container">
+            <div class="article">
+                <h3>Titre de l'Article</h3>
+                <p>Description rapide de l'article. Cet article vous aidera à comprendre [sujet].</p>
+                <button class="article-btn">Lire plus</button>
+            </div>
+            <div class="shop">
+                <h3>Boutique</h3>
+                <p>Découvrez nos produits les plus populaires, sélectionnés juste pour vous.</p>
+                <button class="shop-btn">Voir les produits</button>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog">
+        <h2>Blog</h2>
+        <div class="blog-article">
+            <div class="blog-title">Titre du Premier Article</div>
+            <div class="blog-content">Un aperçu intéressant de ce que nous proposons. Cet article traite de [sujet].</div>
+            <button class="blog-btn">Lire l'article</button>
+        </div>
+        <div class="blog-article">
+            <div class="blog-title">Titre du Deuxième Article</div>
+            <div class="blog-content">Des conseils utiles sur [sujet]. Ne manquez pas ces informations précieuses.</div>
+            <button class="blog-btn">Lire l'article</button>
+        </div>
+    </section>
+
+    <section id="about">
+        <h2>À Propos</h2>
+        <p>Notre mission est de [mission du site]. Nous nous engageons à fournir des informations de qualité et des produits qui répondent à vos besoins.</p>
+    </section>
+
+    <section id="auth">
+        <h2>Connexion / Inscription</h2>
+        <div class="auth-section">
+            <h3>Connexion</h3>
+            <form id="loginForm">
+                <label for="loginEmail">Email :</label>
+                <input type="email" id="loginEmail" name="loginEmail" required>
+                <label for="loginPassword">Mot de passe :</label>
+                <input type="password" id="loginPassword" name="loginPassword" required>
+                <button type="submit">Se connecter</button>
+            </form>
+
+            <h3>Inscription</h3>
+            <form id="signupForm" action="register.php" method="POST">
+                <label for="signupName">Nom :</label>
+                <input type="text" id="signupName" name="signupName" required>
+                <label for="signupEmail">Email :</label>
+                <input type="email" id="signupEmail" name="signupEmail" required>
+                <label for="signupPassword">Mot de passe :</label>
+                <input type="password" id="signupPassword" name="signupPassword" required>
+                <button type="submit">S'inscrire</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Contact</h2>
+        <form id="contactForm">
+            <label for="name">Nom :</label>
+            <input type="text" id="name" required>
+            <label for="email">Email :</label>
+            <input type="email" id="email" required>
+            <label for="message">Message :</label>
+            <textarea id="message" rows="4" required></textarea>
+            <button type="submit">Envoyer</button>
+        </form>
+        <p id="formMessage" style="display:none;">Merci pour votre message !</p>
+    </section>
+
+    <footer>
+        <h3>Contactez-nous</h3>
+        <p>Pour toute question, n'hésitez pas à <a href="#contact">nous contacter</a>.</p>
+        <p>&copy; 2024 Mon Meilleur Site</p>
+    </footer>
+
+    <div class="cursor-circle" id="cursorCircle"></div> <!-- Cercle qui suit la souris -->
+
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Empêche l'envoi du formulaire
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            if (name === '' || email === '' || message === '') {
+                alert('Veuillez remplir tous les champs.');
+            } else {
+                document.getElementById('formMessage').style.display = 'block'; // Affiche le message de remerciement
+                document.getElementById('contactForm').reset(); // Réinitialise le formulaire
+            }
+        });
+
+        // Ajout d'interactions aux boutons
+        const articleButtons = document.querySelectorAll('.article-btn');
+        articleButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Vous allez lire l\'article !');
+            });
+        });
+
+        const shopButtons = document.querySelectorAll('.shop-btn');
+        shopButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Vous allez voir les produits !');
+            });
+        });
+
+        const blogButtons = document.querySelectorAll('.blog-btn');
+        blogButtons.forEach(button => {
+            button.addEventListener('click', () => {
+                alert('Vous allez lire l\'article de blog !');
+            });
+        });
+
+        // Suivi de la souris
+        const cursorCircle = document.getElementById('cursorCircle');
+        document.addEventListener('mousemove', (event) => {
+            cursorCircle.style.left = `${event.pageX}px`;
+            cursorCircle.style.top = `${event.pageY}px`;
+        });
+
+        // Animation au défilement
+        const sections = document.querySelectorAll('section');
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1'; // Rend la section visible
+                    entry.target.style.transition = 'opacity 0.5s';
+                }
+            });
+        }, { threshold: 0.1 });
+
+        sections.forEach(section => {
+            section.style.opacity = '0'; // Cache initialement
+            observer.observe(section);
+        });
+    </script>
+</body>
+</html>
